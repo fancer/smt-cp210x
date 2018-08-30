@@ -15,10 +15,11 @@
 //------------------------------------------------------------------------
 
 BOOL _CP210x_ValidParam(LPVOID lpVoidPointer) {
-    BYTE temp = 0;
+    BYTE temp;
 
     try {
         temp = *((BYTE*) lpVoidPointer);
+        (void)temp;
     } catch (...) {
         return false;
     }
@@ -32,12 +33,13 @@ BOOL _CP210x_ValidParam(LPVOID lpVoidPointer) {
 //------------------------------------------------------------------------
 
 BOOL _CP210x_ValidParam(LPBYTE lpbPointer) {
-    BYTE temp = 0;
+    BYTE temp;
     
     if (!lpbPointer) return FALSE;
 
     try {
         temp = *((BYTE*) lpbPointer);
+        (void)temp;
     } catch (...) {
         return FALSE;
     }
@@ -51,10 +53,11 @@ BOOL _CP210x_ValidParam(LPBYTE lpbPointer) {
 //------------------------------------------------------------------------
 
 BOOL _CP210x_ValidParam(LPWORD lpwPointer) {
-    WORD temp = 0;
+    WORD temp;
 
     try {
         temp = *lpwPointer;
+        (void)temp;
     } catch (...) {
         return FALSE;
     }

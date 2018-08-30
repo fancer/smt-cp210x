@@ -81,8 +81,13 @@ typedef enum _SILABS_PID {
 _Check_return_
 _Success_(return == TRUE)
 __inline static bool IsValidSILABS_PID(_In_ const SILABS_PID _p) {
+#if defined(_MSC_VER)
 #pragma warning ( push )
 #pragma warning ( disable : 6287 ) // warning C6287: redundant code: the left and right sub-expressions are identical
+#elif defined(__GNUC__)
+#pragma GCC diagnostic push
+#pragma GCC diagnostic ignored "-Wenum-compare"
+#endif
 	return ((SILABS_PID_CP210SINGLEPORT == _p) || (SILABS_PID_CP210SINGLEPORTII == _p)
 		 || (SILABS_PID_CP210DUALPORT == _p) || (SILABS_PID_CP210DUALPORTII == _p)
 		 || (SILABS_PID_CP210QUADPORT == _p) || (SILABS_PID_CP210QUADPORTII == _p)
@@ -93,13 +98,22 @@ __inline static bool IsValidSILABS_PID(_In_ const SILABS_PID _p) {
 		 || (SILABS_PID_CP2109 == _p)
 		 || (SILABS_PID_CP2110 == _p) || (SILABS_PID_CP2111 == _p) || (SILABS_PID_CP2112 == _p) || (SILABS_PID_CP2114 == _p)
 		 || (SILABS_PID_CP2130 == _p) || (SILABS_PID_USBXPress == _p));
+#if defined(_MSC_VER)
 #pragma warning ( pop )
+#elif defined(__GNUC__)
+#pragma GCC diagnostic pop
+#endif
 }
 _Check_return_
 _Success_(return == TRUE)
 __inline static bool IsValidCP210X_PID(_In_ const SILABS_PID _p) {
+#if defined(_MSC_VER)
 #pragma warning ( push )
 #pragma warning ( disable : 6287 ) // warning C6287: redundant code: the left and right sub-expressions are identical
+#elif defined(__GNUC__)
+#pragma GCC diagnostic push
+#pragma GCC diagnostic ignored "-Wenum-compare"
+#endif
 	return ((SILABS_PID_CP210SINGLEPORT == _p) || (SILABS_PID_CP210SINGLEPORTII == _p)
 		 || (SILABS_PID_CP210DUALPORT == _p) || (SILABS_PID_CP210DUALPORTII == _p)
 		 || (SILABS_PID_CP210QUADPORT == _p) || (SILABS_PID_CP210QUADPORTII == _p)
@@ -108,7 +122,11 @@ __inline static bool IsValidCP210X_PID(_In_ const SILABS_PID _p) {
 		 || (SILABS_PID_CP2105 == _p) || (SILABS_PID_CP2105II == _p)
 		 || (SILABS_PID_CP2108 == _p) || (SILABS_PID_CP2108II == _p)
 		 || (SILABS_PID_CP2109 == _p));
+#if defined(_MSC_VER)
 #pragma warning ( pop )
+#elif defined(__GNUC__)
+#pragma GCC diagnostic pop
+#endif
 }
 
 // Device Part Numbers
@@ -141,7 +159,19 @@ __inline static bool IsOTPCP210X_PARTNUM(_In_ const CP210X_PARTNUM _v) {
 _Check_return_
 _Success_(return == TRUE)
 __inline static bool IsOTP(_In_ const SILABS_PID _p, _In_ const CP210X_PARTNUM _v) {
+#if defined(_MSC_VER)
+#pragma warning ( push )
+#pragma warning ( disable : 6287 ) // warning C6287: redundant code: the left and right sub-expressions are identical
+#elif defined(__GNUC__)
+#pragma GCC diagnostic push
+#pragma GCC diagnostic ignored "-Wenum-compare"
+#endif
 	return IsValidCP210X_PID(_p) ? IsOTPCP210X_PARTNUM(_v) : ((SILABS_PID_CP2110 == _v) || (SILABS_PID_CP2112 == _v) || (SILABS_PID_CP2114 == _v) || (SILABS_PID_CP2130 == _v));
+#if defined(_MSC_VER)
+#pragma warning ( pop )
+#elif defined(__GNUC__)
+#pragma GCC diagnostic pop
+#endif
 }
 _Check_return_
 _Success_(return == TRUE)

@@ -27,15 +27,15 @@ void writeStr( std::string s)
 }
 void writeUlong( int val)
 {
-    printf( " %08lx", (DWORD) val);
+    printf( " %08lx", (unsigned long) val);
 }
 void writeUlong( DWORD val)
 {
-    printf( " %08lx", val);
+    printf( " %08lx", (unsigned long) val);
 }
 void writeUlongParm( DWORD val)
 {
-    printf( " { %08lx }", val);
+    printf( " { %08lx }", (unsigned long) val);
 }
 void writeUshort( WORD val)
 {

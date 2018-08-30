@@ -59,7 +59,9 @@ public:
 
 	// Public Methods
 public:
+#if defined(_MSC_VER)
 #pragma warning(suppress: 26135)	// The _Acquires_lock_() annotation seems like it is correct, but clearly isn't as Warning 26135 is still generated. TODO: resolve.
+#endif
 	_Acquires_lock_(m_cs)
 	inline void Lock() throw()
 	{
@@ -69,7 +71,9 @@ public:
 		pthread_mutex_lock(&m_cs);
 #endif
 	}
+#if defined(_MSC_VER)
 #pragma warning(suppress: 26135)	// The _Acquires_lock_() annotation seems like it is correct, but clearly isn't as Warning 26135 is still generated. TODO: resolve.
+#endif
 	_Releases_lock_(m_cs)
 	inline void Unlock() throw()
 	{
