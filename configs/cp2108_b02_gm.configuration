@@ -1,0 +1,14 @@
+FilterPartNumByte {  { 08 }  } 
+FilterVidPid {  { 10C4 }  { EA71 }  } 
+VidPid {  { 10C4 }  { EA71 }  } 
+ProductStringUnicode {  { 43 00 50 00 32 00 31 00 30 00 38 00 20 00 51 00 75 00 61 00 64 00 20 00 55 00 53 00 42 00 20 00 74 00 6F 00 20 00 55 00 41 00 52 00 54 00 20 00 42 00 72 00 69 00 64 00 67 00 65 00  }  } 
+PowerMode {  { 00 }  } 
+MaxPower {  { 32 }  } 
+DeviceVersion {  { 0100 }  } 
+ManufacturerStringUnicode {  { 53 00 69 00 6C 00 69 00 63 00 6F 00 6E 00 20 00 4C 00 61 00 62 00 73 00  }  } 
+FlushBufferConfig {  { 3333 }  } 
+QuadPortConfig {  { 1515 0000 0007 0045 0005 0000 0000 0000 0000 0000 FFFF FFFF FFFC FFFF FFFF 1515 0000 0007 0045 0005 0000 0000 0000 0000 0000 FFFF FFFF FFFC FFFF FFFF 00 00 00 00 00 00 00 00 30 FF FF FF FF }  } 
+InterfaceStringUnicode0 {  { 43 00 50 00 32 00 31 00 30 00 38 00 20 00 49 00 6E 00 74 00 65 00 72 00 66 00 61 00 63 00 65 00 20 00 30 00  }  } 
+InterfaceStringUnicode1 {  { 43 00 50 00 32 00 31 00 30 00 38 00 20 00 49 00 6E 00 74 00 65 00 72 00 66 00 61 00 63 00 65 00 20 00 31 00  }  } 
+InterfaceStringUnicode2 {  { 43 00 50 00 32 00 31 00 30 00 38 00 20 00 49 00 6E 00 74 00 65 00 72 00 66 00 61 00 63 00 65 00 20 00 32 00  }  } 
+InterfaceStringUnicode3 {  { 43 00 50 00 32 00 31 00 30 00 38 00 20 00 49 00 6E 00 74 00 65 00 72 00 66 00 61 00 63 00 65 00 20 00 33 00  }  } 

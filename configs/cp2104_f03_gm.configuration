@@ -1,0 +1,9 @@
+FilterPartNumByte {  { 04 }  } 
+FilterVidPid {  { 10C4 }  { EA60 }  } 
+VidPid {  { 10C4 }  { EA60 }  } 
+ProductStringUnicode {  { 43 00 50 00 32 00 31 00 30 00 34 00 20 00 55 00 53 00 42 00 20 00 74 00 6F 00 20 00 55 00 41 00 52 00 54 00 20 00 42 00 72 00 69 00 64 00 67 00 65 00  }  } 
+PowerMode {  { 00 }  } 
+MaxPower {  { 32 }  } 
+DeviceVersion {  { 0100 }  } 
+PortConfig {  { C054 3FFF 3FFF 00 }  } 
+FlushBufferConfig {  { 000F }  } 
